@@ -1,9 +1,12 @@
 import './App.scss';
+import Main from './components/Main/Main';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Punk API</h1>
+      <Navbar className="navbar" />
+      <Main className="main" />
     </div>
   );
 }
