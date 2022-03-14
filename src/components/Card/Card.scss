@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+
+.beer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  width: 80%;
+  border: solid black 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $color-secondary;
+  color: $color-white;
+
+  &__name {
+    color: $color-highlight;
+  }
+
+  &__image-container {
+    background-color: $color-white;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__image {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+  }
+
+  .prefix {
+    font-weight: bold;
+    color: $color-highlight;
+  }
+
+}

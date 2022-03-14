@@ -1,5 +1,7 @@
-
+@use "../../styles/variables" as *;
 
 .navbar {
   border: solid black 2px;
+  background-color: $color-secondary;
+  color: $color-white;
 }
