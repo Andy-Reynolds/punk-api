@@ -1,9 +1,13 @@
 import React from 'react'
 import "./Card.scss"
 
-const Card = () => {
+const Card = ({beer}) => {
   return (
-    <div>Card</div>
+    <div className='beer-card'>
+      <div>beer image here</div>
+      <h3>Name of beer</h3>
+      <p>Lots of info about beer here</p>      
+    </div>
   )
 }
 
