@@ -10,8 +10,9 @@ function App() {
   const [searchedBeer, setSearchedBeer] = useState("")
 
   const handleSearchInput = (event) => {
-    console.log(event.target.value);
-    setSearchedBeer(event.target.value);
+    const beerSearch = event.target.value;
+    const beerSearchToLowerCase = beerSearch.toLowerCase();
+    setSearchedBeer(beerSearchToLowerCase);
   }
 
 
