@@ -3,11 +3,11 @@ import FiltersList from '../FiltersList/FiltersList';
 import SearchBox from '../SearchBox/SearchBox';
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({handleSearchInput}) => {
   return (
     <div className='navbar'>
       <h1 className='heading'>Punk API</h1>
-      <SearchBox />
+      <SearchBox handleSearchInput={handleSearchInput} />
       <FiltersList />
     </div>
   )
