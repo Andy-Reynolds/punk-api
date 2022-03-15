@@ -14,6 +14,7 @@ const Card = ({beer}) => {
           <img className='beer-card__image' src={beer.image_url} alt="" />
         </div>
         <div className="beer-card__info">
+          <p className="beer-card__info--scroll">&darr; Scroll down for more info &darr;</p>
           <p className='beer-card__info--abv'><span className='prefix'>ABV:</span> {beer.abv}%</p>
           <p className='beer-card__info--first-brewed'><span className='prefix'>First brewed:</span> {beer.first_brewed}</p>
           <p className='beer-card__info--ph'><span className='prefix'>ph:</span> {beer.ph}</p>
