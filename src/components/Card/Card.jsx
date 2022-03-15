@@ -3,7 +3,7 @@ import "./Card.scss"
 
 const Card = ({beer}) => {
 
-  // console.log(beer)
+  console.log(beer)
   
 
   return (
