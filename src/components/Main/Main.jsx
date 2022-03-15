@@ -2,10 +2,10 @@ import React from 'react';
 import CardList from '../CardList/CardList';
 import "./Main.scss";
 
-const Main = ({beers}) => {
+const Main = ({beers, searchedBeer}) => {
   return (
     <div className='main'>
-      <CardList beers={beers} />
+      <CardList searchedBeer={searchedBeer} beers={beers} />
     </div>
   )
 }

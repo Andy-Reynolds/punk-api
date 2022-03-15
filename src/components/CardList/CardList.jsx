@@ -2,10 +2,10 @@ import React from 'react'
 import Card from '../Card/Card'
 import "./CardList.scss"
 
-const CardList = ({beers}) => {
-  return beers.map((beer) => {
+const CardList = ({beers, searchedBeer}) => {
+  return beers.filter(beer => beer.name === searchedBeer).map((beer) => {
     return (
-      <Card beer={beer} />
+      <Card key={beer.id} beer={beer} />
     )
   })
 }
