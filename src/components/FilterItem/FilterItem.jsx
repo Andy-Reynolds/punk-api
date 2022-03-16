@@ -4,7 +4,7 @@ import "./FilterItem.scss"
 const FilterItem = ({filterItems, handleCheckboxes}) => {
   return filterItems.map((item, index) => {
 
-    console.log(item);
+    // console.log(item);
 
     return (
         <div key={index} className="filter-item">
