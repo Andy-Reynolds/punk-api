@@ -86,7 +86,7 @@ function App() {
   return (
     <div className="App">
       <Navbar className="navbar" handleSearchInput={handleSearchInput} handleCheckboxes={handleCheckboxes} />
-      <Main className="main" searchedBeer={searchedBeer} beers={beers} />
+      <Main className="main" searchedBeer={searchedBeer} filteredBeers={filteredBeers} />
     </div>
   );
 }
