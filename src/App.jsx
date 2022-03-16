@@ -31,7 +31,7 @@ function App() {
     // If value is 1, then run classic function
     // If value is 2, then run acidic function
 
-    if (checkboxValue === 0) {
+    if (Number(checkboxValue) === 0) {
       console.log("this is the abv checkbox")
       if (isChecked) {
         console.log("abv checked");
@@ -46,7 +46,7 @@ function App() {
       }
     }
 
-    if (checkboxValue === 1) {
+    if (Number(checkboxValue) === 1) {
       if (isChecked) {
         console.log("classic checked");
         // console.log(parseInt(beers[0].first_brewed.split("/")[1]));
@@ -59,7 +59,7 @@ function App() {
       }
     }
 
-    if (checkboxValue === 2) {
+    if (Number(checkboxValue) === 2) {
       console.log("this is the acid checkbox")
       if (isChecked) {
         console.log("acid checked");
