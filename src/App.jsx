@@ -6,6 +6,9 @@ import Navbar from './components/Navbar/Navbar';
 import {useState, useEffect} from "react";
 
 function App() {
+  const [beersArr, setBeersArr] = useState([])
+  const [searchedBeer, setSearchedBeer] = useState("");
+  const [filteredBeers, setFilteredBeers] = useState([]);
 
   const url = "https://api.punkapi.com/v2/beers";
 
@@ -14,17 +17,12 @@ function App() {
     const data = await res.json();
     console.log(data);
     setBeersArr(data);
-    return data;
+    setFilteredBeers(data);
   }
 
   useEffect(() => {
     getBeers();
   }, []);
-
-  const [beersArr, setBeersArr] = useState([])
-  const [searchedBeer, setSearchedBeer] = useState("");
-  const [filteredBeers, setFilteredBeers] = useState(beersArr);
-
 
   const handleSearchInput = (event) => {
     const beerSearch = event.target.value;
