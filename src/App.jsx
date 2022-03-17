@@ -38,52 +38,56 @@ function App() {
   const handleCheckboxes = (event) => {
     const checkboxValue = event.target.value;
     const isChecked = event.target.checked;
-    console.log(checkboxValue);
-    console.log(isChecked);
+    // console.log(checkboxValue);
+    // console.log(isChecked);
 
     // If value is 0, then run abv function
     // If value is 1, then run classic function
     // If value is 2, then run acidic function
 
     if (Number(checkboxValue) === 0) {
-      console.log("this is the abv checkbox")
+      // console.log("this is the abv checkbox")
       if (isChecked) {
-        console.log("abv checked");
-        console.log(beersArr)
-        const filterByAbv = beersArr.filter(beer => beer.abv > 6);
-        console.log(filterByAbv);
-        console.log(beersArr);
+        // console.log("abv checked");
+        // console.log(beersArr)
+        const filterByAbv = filteredBeers.filter(beer => beer.abv > 6);
+
+        // console.log(filterByAbv);
+        // console.log(beersArr);
         setFilteredBeers(filterByAbv);
       } else {
-        console.log("abv unchecked");
-        setFilteredBeers(beersArr);
+        // console.log("abv unchecked");
+        const filterByAbvInverse = beersArr.filter(beer => beer.abv <= 6);
+        setFilteredBeers(filteredBeers.concat(filterByAbvInverse));
       }
     }
 
     if (Number(checkboxValue) === 1) {
       if (isChecked) {
-        console.log("classic checked");
+        // console.log("classic checked");
         // console.log(parseInt(beers[0].first_brewed.split("/")[1]));
-        const filterByClassic = beersArr.filter(beer => (parseInt(beer.first_brewed.split("/")[1]) < 2010));
-        console.log(filterByClassic);
+        const filterByClassic = filteredBeers.filter(beer => (parseInt(beer.first_brewed.split("/")[1]) < 2010));
+        // console.log(filterByClassic);
         setFilteredBeers(filterByClassic);
       } else {
-        console.log("classic unchecked");
-        setFilteredBeers(beersArr);
+        // console.log("classic unchecked");
+        const filterByClassicInverse = beersArr.filter(beer => (parseInt(beer.first_brewed.split("/")[1]) >= 2010));
+        setFilteredBeers(filteredBeers.concat(filterByClassicInverse));
       }
     }
 
     if (Number(checkboxValue) === 2) {
-      console.log("this is the acid checkbox")
+      // console.log("this is the acid checkbox")
       if (isChecked) {
-        console.log("acid checked");
-        const filterByPh = beersArr.filter(beer => beer.ph < 4);
-        console.log(filterByPh);
-        console.log(beersArr);
+        // console.log("acid checked");
+        const filterByPh = filteredBeers.filter(beer => beer.ph < 4);
+        // console.log(filterByPh);
+        // console.log(beersArr);
         setFilteredBeers(filterByPh);
       } else {
-        console.log("acid unchecked");
-        setFilteredBeers(beersArr);
+        // console.log("acid unchecked");
+        const filterByPhInverse = beersArr.filter(beer => beer.ph >= 4);
+        setFilteredBeers(filteredBeers.concat(filterByPhInverse));
       }
     }
 
