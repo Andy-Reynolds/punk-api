@@ -58,7 +58,9 @@ function App() {
       } else {
         // console.log("abv unchecked");
         const filterByAbvInverse = beersArr.filter(beer => beer.abv <= 6);
-        setFilteredBeers(filteredBeers.concat(filterByAbvInverse));
+        const mergedArrays = filteredBeers.concat(filterByAbvInverse);
+        const removeDuplicates = mergedArrays.filter((beer, index) => mergedArrays.indexOf(beer) === index)
+        setFilteredBeers(removeDuplicates);
       }
     }
 
@@ -72,7 +74,9 @@ function App() {
       } else {
         // console.log("classic unchecked");
         const filterByClassicInverse = beersArr.filter(beer => (parseInt(beer.first_brewed.split("/")[1]) >= 2010));
-        setFilteredBeers(filteredBeers.concat(filterByClassicInverse));
+        const mergedArrays = filteredBeers.concat(filterByClassicInverse);
+        const removeDuplicates = mergedArrays.filter((beer, index) => mergedArrays.indexOf(beer) === index);
+        setFilteredBeers(removeDuplicates);
       }
     }
 
@@ -87,7 +91,9 @@ function App() {
       } else {
         // console.log("acid unchecked");
         const filterByPhInverse = beersArr.filter(beer => beer.ph >= 4);
-        setFilteredBeers(filteredBeers.concat(filterByPhInverse));
+        const mergedArrays = filteredBeers.concat(filterByPhInverse);
+        const removeDuplicates = mergedArrays.filter((beer, index) => mergedArrays.indexOf(beer) === index);
+        setFilteredBeers(removeDuplicates);
       }
     }
 
